@@ -1381,11 +1381,6 @@ h2 {
     transform: rotate(-15deg);
 }
 
-.form-cover {
-    //height: 100vh;
-    margin: 20px;
-}
-
 .form-signin input {
     background: #FAFAFA;
     border: 1px solid #C9CDD5;
