@@ -1238,7 +1238,7 @@ h2 {
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('../../assets/img/bg.png');
+    background-image: url('assets/img/bg.png');
     height: 418px;
     width: 100%;
     border-radius: 8px;
@@ -1506,20 +1506,13 @@ input[type=date]::-webkit-inner-spin-button {
     display: none;
 }
 
-// input[type=date]::-webkit-calendar-picker-indicator {
-//     -webkit-appearance: none;
-//     display: none;
-// }
 
 input[type=time]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     display: none;
 }
 
-// input[type=time]::-webkit-calendar-picker-indicator {
-//     -webkit-appearance: none;
-//     display: none;
-// }
+
 
 input.error {
     background: #ffeded !important;
@@ -1611,6 +1604,10 @@ p.contacts {
     color: black !important;
 }
 
+#myChart{
+    margin-top: 0 !important;
+}
+
 .chart{
     position: relative;
 }
@@ -1636,6 +1633,217 @@ p.contacts {
     line-height: 22px;   
 }
 
-.red{
+.interests{
+    margin-top: 100px;
+    padding: 30px;
+    background-color: rgba(196, 196, 196, 0.15);
+    border-radius: 5px;
+}
+
+.progress{
+    height: 8px !important;
+    border-radius: 2px !important;
+}
+
+/* red */
+.red.progress{
+    background-color: rgba(255, 73, 90, 0.4);
+}
+
+.red.progress > .progress-bar {
     background-color: #FF495A;
+}
+
+
+/* yellow */
+.yellow.progress{
+    background-color:rgba(249, 187, 34, 0.4);
+}
+
+.yellow.progress > .progress-bar {
+    background-color: #F9BB22;
+}
+
+/* green */
+.green.progress{
+    background-color:rgba(109, 202, 51, 0.4);
+}
+
+.green.progress > .progress-bar {
+    background-color: #6DCA33;
+}
+
+/* mint */
+.mint.progress{
+    background-color:rgba(35, 217, 160, 0.4);
+}
+
+.mint.progress > .progress-bar {
+    background-color: #23D9A0;
+}
+
+/* blue */
+.blue.progress{
+    background-color:rgba(43, 164, 212, 0.4);
+}
+
+.blue.progress > .progress-bar {
+    background-color: #2BA4D4;
+}
+
+/* purple */
+.purple.progress{
+    background-color:rgba(179, 137, 211, 0.4);
+}
+
+.purple.progress > .progress-bar {
+    background-color: #B389D3;
+}
+
+.card{
+    height: 250px;
+    width: 360px;
+    border-radius: 5px;
+}
+
+.netflix{
+    background: url('assets/img/netflix_bg.png');
+}
+
+.card.skyeng{
+    background: url('assets/img/skyeng_bg.png');
+}
+
+.card.netflix > img {
+    width: auto;
+
+    position: absolute;
+    left: 22px;
+    bottom: 85px;
+}
+
+.card > .title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    color: #FFFFFF;
+
+    position: absolute;
+    left: 22px;
+    bottom: 28px;
+}
+
+.card.skyeng > .title {
+    color: black;
+}
+
+.card.skyeng > img {
+    width: auto;
+
+    position: absolute;
+    left: 8px;
+    top: 16px;
+}
+
+.card.skyeng > .title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.card > button{
+    width: 160px;
+    height: 55px;
+
+    background: linear-gradient(180deg, #F9BD22 0%, #FE6A17 100%), #F9BB22;
+    border-radius: 5px;
+    border: 0;
+
+    position: absolute;
+    bottom: -27px;
+    right: 20px;
+}
+
+.card > button > span{
+    color: white;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.card > button > span > .subscription{
+    color: white;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 10px;
+}
+
+.card > button > span > .price-number{
+    color: white;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.share-link > span{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.share-link > span > a{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    text-decoration-line: underline;
+    color: #F9BB22;
+}
+
+.share-link > span > a > img{
+    vertical-align: middle;
+}
+
+.icon-rnd > div{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-color: #F9BB22;
+}
+
+.icon-rnd > div > img{
+    position: absolute;
+    width: 21px;
+    height: 21px;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: white;
+}
+
+.rights span{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.rights span > b{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    text-decoration-line: underline;
 }
