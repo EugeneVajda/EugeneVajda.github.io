@@ -1635,6 +1635,11 @@ p.contacts {
     border-radius: 5px;
 }
 
+.interests h2{
+    font-size: 36px;
+    font-weight: 800;
+}
+
 .progress{
     height: 8px !important;
     border-radius: 2px !important;
@@ -1697,7 +1702,7 @@ p.contacts {
 
 .card{
     height: 250px;
-    width: 360px;
+    background-size: cover !important;
     border-radius: 5px;
 }
 
@@ -1710,9 +1715,9 @@ p.contacts {
 }
 
 .card.netflix > img {
-    width: auto;
-
+    width: auto;    
     position: absolute;
+
     left: 22px;
     bottom: 85px;
 }
@@ -1812,8 +1817,27 @@ p.contacts {
 .icon-rnd > div{
     width: 60px;
     height: 60px;
-    border-radius: 100%;
+    border-radius: 100%;    
+}
+
+.yellow > div{
     background-color: #F9BB22;
+}
+
+.mint > div{
+    background-color: #23D9A0;
+}
+
+.green > div{
+    background-color: #6DCA33;
+}
+
+.blue > div{
+    background-color: #2BA4D4;
+}
+
+.red > div{
+    background-color: #FF495A;
 }
 
 .icon-rnd > div > img{
@@ -1841,4 +1865,46 @@ p.contacts {
     font-weight: 800;
     font-size: 14px;
     text-decoration-line: underline;
+}
+
+.netflix.interest{
+    background: none;
+    position: absolute;
+    left: 80px;
+    top: 138px;    
+}
+
+.skyeng.interest{
+    background: none;
+    position: absolute;
+    right: 80px;
+    top: 80px;    
+}
+
+.spotify.interest{
+    background: none;
+    position: absolute;
+    right: 180px;
+    bottom: 80px;    
+}
+
+.interest .icon-rnd > div {
+    width: 30px;
+    height: 30px;    
+}
+
+.interest .icon-rnd > div > img {
+    width: 15px;
+    height: 15px; 
+}
+
+.interest .title{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 29px;
+    text-decoration-line: underline;
+
+    color: #000000;
 }
