@@ -37,32 +37,34 @@
                 <div class="navbar-collapse collapse" id="navbarCollapse">
                     <div class="container-fluid" style="margin:0;">
                         <div class="row justify-content-between menu-row" style="margin: auto;">
-                            <div class="col-sm-12 col-md-3 text-center align-self-center">
+                            <div class="col-sm-12 col-md-2 text-center align-self-center">
                                 <a href="https://quiz.digi.gift">
-                                    <button (click)="scrollToElement(product)" type="button" class="btn outline-bottom">Product</button>
+                                    <button (click)="scrollToElement(product)" type="button" class="btn">ABOUT DIGI</button>
                                 </a>                        
                             </div>
-                            <div class="col-sm-12 col-md-3 text-center align-self-center">
+                            <div class="col-sm-12 col-md-2 text-center align-self-center">
+                                <a href="https://quiz.digi.gift">
+                                    <button (click)="scrollToElement(product)" type="button" class="btn">HOW IT WORKS</button>
+                                </a>                        
+                            </div>
+                            <div class="col-sm-12 col-md-2 text-center align-self-center">
                                 <a href="https://partner.digi.gift">
-                                        <button type="button" class="btn outline-bottom">For
-                                                partners</button>
+                                        <button type="button" class="btn">TERMS & PRICES</button>
                                 </a>                        
                             </div>
                             <div id="bottomMenu" class="col-auto text-center align-self-center">
-                                <div class="row justify-content-center">
-                                    <div class="col-6 col-sm-6 col-md-5 col-lg-5">
-                                        <button type="button" routerLink="/login" class="btn login-button float-md-right float-xs-none d-none d-lg-block"><img
-                                                src="assets/icons/key.svg" class="align-bottom" style="display: inline-block;"
-                                                alt="Key">Login</button>
-                                        <button type="button" routerLink="/login" class="btn login-button float-right d-lg-none text-md-right text-md-left"><img
-                                                src="assets/icons/key.svg" class="align-bottom" style="display: inline-block;"
-                                                alt="Key"></button>
-                                    </div>
-                                    <div class="col-6 col-sm-6 col-md-4 col-lg-4 align-self-center" style="left: -15px;">
-                                        <button type="button" routerLink="/getStarted" class="btn outline-header-button float-md-left float-xs-none d-none d-md-block">Sign
-                                            up</button>
-                                        <button id="demoBtn" type="button" routerLink="/getStarted" class="btn btn-demo header float-md-left float-left d-md-none"
-                                            style="height: 44px;">try demo</button>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <button type="button" routerLink="/getStarted" class="btn outline-header-button">GO TO QUIZ</button>
+                                            </div>
+                                            <div class="col-6">                                                
+                                                <button type="button" routerLink="/login" class="btn login-button"><img
+                                                    src="assets/icons/clocks.svg" class="align-bottom" style="display: inline-block;"
+                                                    alt="Key">5 MIN</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

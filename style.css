@@ -433,10 +433,6 @@ body {
     height: 80px;
 }
 
-.navbar-brand {
-    padding-left: 64px;
-}
-
 .scheduleCall {
     height: 800px !important;
     margin-top: 10px !important;
@@ -804,10 +800,6 @@ h2 {
 
     .secondaryMenu {
         margin: 0 60px;
-    }
-
-    .navbar-brand {
-        padding-left: 60px;
     }
 
     .scheduleCall {
@@ -1905,6 +1897,19 @@ p.contacts {
     font-size: 24px;
     line-height: 29px;
     text-decoration-line: underline;
+
+    color: #000000;
+}
+
+header button{
+    font-family: Montserrat;
+    font-style: normal;
+    border: 0 !important;
+    font-weight: 800 !important;
+    font-size: 12px !important;
+    /* identical to box height */
+
+    letter-spacing: 0.1em;
 
     color: #000000;
 }
