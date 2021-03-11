@@ -1,324 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8">
-    <title>Dipeus</title>
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <script src="https://apis.google.com/js/api.js" type="text/javascript"></script>
-    <script src="assets/js/progressbar.js" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous">
-        </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous">
-        </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous">
-        </script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-        crossorigin="anonymous">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
-    
-</head>
-<body>
+    crossorigin="anonymous">
+    </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous">
+    </script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous">
+    </script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+
+    <title>dipeus-bot-template</title>
+  </head>
+  <body>
+    <!-- <div id="app"></div> -->
+    <!-- built files will be auto injected -->
+
     <header>
-        <div id="navbar" class="navbar navbar-expand-md fixed-top navbar-light ">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img class="logo" src="assets/img/logo.png" alt="">
-                </a>
-                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <!-- <span class="navbar-toggler-icon"></span> -->
-                    <img>
-                </button>
-                <div class="navbar-collapse collapse" id="navbarCollapse">
-                    <div class="container-fluid" style="margin:0;">
-                        <div class="row justify-content-between menu-row" style="margin: auto;">
-                            <div class="col-sm-12 col-md-2 text-center align-self-center">
-                                <a href="https://quiz.digi.gift">
-                                    <button (click)="scrollToElement(product)" type="button" class="btn">ABOUT DIPEUS</button>
-                                </a>                        
-                            </div>
-                            <div class="col-sm-12 col-md-2 text-center align-self-center">
-                                <a href="https://quiz.digi.gift">
-                                    <button (click)="scrollToElement(product)" type="button" class="btn">HOW IT WORKS</button>
-                                </a>                        
-                            </div>
-                            <div class="col-sm-12 col-md-2 text-center align-self-center">
-                                <a href="https://partner.digi.gift">
-                                        <button type="button" class="btn">TERMS & PRICES</button>
-                                </a>                        
-                            </div>
-                            <div id="bottomMenu" class="col-auto text-center align-self-center">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <button type="button" routerLink="/getStarted" class="btn outline-header-button">GO TO QUIZ</button>
-                                            </div>
-                                            <div class="col-6">                                                
-                                                <button type="button" routerLink="/login" class="btn login-button"><img
-                                                    src="assets/icons/clocks.svg" class="align-bottom" style="display: inline-block;"
-                                                    alt="Key">5 MIN</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    </header>
-    <div class="container interests">
-        <div class="row justify-content-center">
-            <div class="col-auto">                
-                <h2>Steve’s interests</h2>
-            </div>
-        </div>
-        <div class="row justify-content-center" style="position: relative;">
-            <div class="col-5" style="max-width: 400px; min-width: 400px;">
-                <div class="chart">
-                    <canvas id="myChart" width="100" height="100" style="margin-top: 100px"></canvas>
-                    <div class="avatar">
-                        <img src="assets/img/man.png" alt="">
-                    </div>
-                </div> 
-            </div>
-            <div class="netflix interest">
-                <span class="icon-rnd red" style="display: inline-block; position: relative; vertical-align: bottom;">
-                    <div><img src="assets/icons/icon_movie.svg" alt=""></div>
-                </span>
-                <span class="icon-rnd yellow" style="display: inline-block; position: relative; vertical-align: bottom;">
-                    <div><img src="assets/icons/icon_education.svg" alt=""></div>
-                </span>
-                <span class="title">netflix</span>
-            </div>
-            <div class="skyeng interest">
-                <span class="icon-rnd green" style="display: inline-block; position: relative; vertical-align: bottom;">
-                    <div><img src="assets/icons/icon_business.svg" alt=""></div>
-                </span>
-                <span class="icon-rnd mint" style="display: inline-block; position: relative; vertical-align: bottom;">
-                    <div><img src="assets/icons/icon_language.svg" alt=""></div>
-                </span>
-                <span class="title">skyeng</span>
-            </div>
-            <div class="spotify interest">
-                <span class="icon-rnd blue" style="display: inline-block; position: relative; vertical-align: bottom;">
-                    <div><img src="assets/icons/icon_music.svg" alt=""></div>
-                </span>
-                <span class="title">spotify</span>
-            </div>
-        </div>
-        <div class="row justify-content-around">
-            <div class="col-3">
-                <div class="row">
-                    <div class="col-12 mt-1">
-                        <div class="row skill-level">
-                            <div class="col">
-                                <span class="progress-title">Art & movies</span>
-                            </div>
-                            <div class="col-auto mr-0">
-                                <span class="percent">36%</span>
-                            </div>
-                            <div class="col-12">
-                                <div class="progress red">
-                                    <div class="progress-bar" style="width: 36%;" role="progressbar" aria-valuenow="36" aria-valuemin="0"
-                                        aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>  
-                    </div>
-                    <div class="col-12 mt-1">
-                        <div class="row skill-level">
-                            <div class="col">
-                                <span class="progress-title">History</span>
-                            </div>
-                            <div class="col-auto mr-0">
-                                <span class="percent">22%</span>
-                            </div>
-                            <div class="col-12">
-                                <div class="progress yellow">
-                                    <div class="progress-bar" style="width: 22%;" role="progressbar" aria-valuenow="22" aria-valuemin="0"
-                                        aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>  
-                    </div>
-                    <div class="col-12 mt-1">
-                        <div class="row skill-level">
-                            <div class="col">
-                                <span class="progress-title">Business & finances</span>
-                            </div>
-                            <div class="col-auto mr-0">
-                                <span class="percent">18%</span>
-                            </div>
-                            <div class="col-12">
-                                <div class="progress green">
-                                    <div class="progress-bar" style="width: 18%;" role="progressbar" aria-valuenow="18" aria-valuemin="0"
-                                        aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>  
-                    </div>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="row">
-                    <div class="col-12 mt-1">
-                        <div class="row skill-level">
-                            <div class="col">
-                                <span class="progress-title">Languages</span>
-                            </div>
-                            <div class="col-auto mr-0">
-                                <span class="percent">12%</span>
-                            </div>
-                            <div class="col-12">
-                                <div class="progress mint">
-                                    <div class="progress-bar" style="width: 12%;" role="progressbar" aria-valuenow="12" aria-valuemin="0"
-                                        aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>  
-                    </div>
-                    <div class="col-12 mt-1">
-                        <div class="row skill-level">
-                            <div class="col">
-                                <span class="progress-title">Music</span>
-                            </div>
-                            <div class="col-auto mr-0">
-                                <span class="percent">8%</span>
-                            </div>
-                            <div class="col-12">
-                                <div class="progress blue">
-                                    <div class="progress-bar" style="width: 8%;" role="progressbar" aria-valuenow="8" aria-valuemin="0"
-                                        aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>  
-                    </div>
-                    <div class="col-12 mt-1">
-                        <div class="row skill-level">
-                            <div class="col">
-                                <span class="progress-title">Other interests</span>
-                            </div>
-                            <div class="col-auto mr-0">
-                                <span class="percent">4%</span>
-                            </div>
-                            <div class="col-12">
-                                <div class="progress purple">
-                                    <div class="progress-bar" style="width: 4%;" role="progressbar" aria-valuenow="4" aria-valuemin="0"
-                                        aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>  
-                    </div>
-                </div>
-            </div>
-        </div>        
-    </div>
-    <div class="container">
-        <div class="row" style="padding-top: 150px;">
-            <div class="col-sm-12 py-5 col-md-6 col-lg-4 ">
-                <div class="card netflix">
-                    <img src="assets/img/netflix.png" alt="" class="logo-bottom">
-                    <span class="title">The best historical movies <br> on Netflix</span>
-                    <button>
-                        <span>
-                            <b class="subscription">SUBSCRIPTION FROM</b> <br>
-                            <b class="price-number">$38</b>/month
-                        </span> 
-                    </button>
-                </div>
-            </div>
-            <div class="col-sm-12 py-5 col-md-6 col-lg-4">
-                <div class="card skyeng">
-                    <img src="assets/img/skyeng.png" alt="" class="logo-bottom">
-                    <span class="title">Learn spanish for business <br> on Skyeng</span>
-                    <button>
-                        <span>
-                            <b class="subscription">SUBSCRIPTION FROM</b> <br>
-                            <b class="price-number">$38</b>/month
-                        </span> 
-                    </button>
-                </div>
-            </div>
-            <div class="col-sm-12 py-5 col-md-6 col-lg-4">
-                <div class="card netflix">
-                    <img src="assets/img/netflix.png" alt="" class="logo-bottom">
-                    <span class="title">The best historical movies <br> on Netflix</span>
-                    <button>                        
-                        <span>
-                            <b class="subscription">SUBSCRIPTION FROM</b> <br>
-                            <b class="price-number">$38</b>/month
-                        </span>                        
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container" style="padding-top: 116px;">
-        <div class="row">
-            <div class="col share-link text-center">
-                <span>Share the result or 
-                    <a href="">send the link 
-                        <img src="assets/img/share.svg" class="ml-1" alt="">
-                    </a>
-                </span>
-            </div>            
-        </div>
-    </div>
-    <div class="container">
-        <div class="row justify-content-center" style="padding-top: 35px; height: 60px;">
-            <div class="col-auto icon-rnd yellow"><div><img src="assets/icons/social/facebook.svg" alt=""></div></div>
-            <div class="col-auto icon-rnd yellow"><div><img src="assets/icons/social/instagram.svg" alt=""></div></div>
-            <div class="col-auto icon-rnd yellow"><div><img src="assets/icons/social/twitter.svg" alt=""></div></div>
-            <div class="col-auto icon-rnd yellow"><div><img src="assets/icons/social/linkedin.svg" alt=""></div></div>
-        </div>
-    </div>
-    <footer class="container rights" style="padding-top: 92px; padding-bottom: 62px;">
-        <div class="row justify-content-center">
-            <div class="col-auto">
-                <span>Powered by <b>digi.gift</b></span>
-            </div>
-        </div>
-    </footer>
-    
-    <script type="text/javascript">
-    var ctx = document.getElementById('myChart').getContext('2d');
-    var chart = new Chart(ctx, {
-    // The type of chart we want to create
-    type: 'doughnut',
-    legend: {
-            display: false
-        },
-        title: {
-            display: false
-        },
-        layout: {
-            margin: {
-                left: 0,
-                right: 0,
-                top: 0,
-                bottom: 0
-            }
-        },
-    // The data for our dataset
-    data: {
-    datasets: [{
-        data: [30, 20, 10, 5, 50, 30],
-        backgroundColor: ["#6DCA33","#23D9A0","#2BA4D4", "#B389D3", "#FF495A", "#F9BB22"]
-    }],
+      <div id="navbar" class="navbar navbar-expand-md fixed-top navbar-light ">
+          <div class="container">
+              <a class="navbar-brand" href="#">
+                  <img class="logo" src="/static/img/logo.png" alt="">
+              </a>
+              <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                  aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                  <!-- <span class="navbar-toggler-icon"></span> -->
+                  <img>
+              </button>
+              <div class="navbar-collapse collapse" id="navbarCollapse">
+                  <div class="container-fluid" style="margin:0;">
+                      <div class="row justify-content-between menu-row" style="margin: auto;">
+                          <div class="col-sm-12 col-md-2 text-center align-self-center">
+                              <a href="https://quiz.digi.gift">
+                                  <button (click)="scrollToElement(product)" type="button" class="btn">ABOUT DIPEUS</button>
+                              </a>                        
+                          </div>
+                          <div class="col-sm-12 col-md-2 text-center align-self-center">
+                              <a href="https://quiz.digi.gift">
+                                  <button (click)="scrollToElement(product)" type="button" class="btn">HOW IT WORKS</button>
+                              </a>                        
+                          </div>
+                          <div class="col-sm-12 col-md-2 text-center align-self-center">
+                              <a href="https://partner.digi.gift">
+                                      <button type="button" class="btn">TERMS & PRICES</button>
+                              </a>                        
+                          </div>
+                          <div id="bottomMenu" class="col-auto text-center align-self-center">
+                              <div class="row">
+                                  <div class="col-12">
+                                      <div class="row">
+                                          <div class="col-6">
+                                              <button type="button" routerLink="/getStarted" class="btn outline-header-button">GO TO QUIZ</button>
+                                          </div>
+                                          <div class="col-6">                                                
+                                              <button type="button" routerLink="/login" class="btn login-button"><img
+                                                  src="/static/icons/clocks.svg" class="align-bottom" style="display: inline-block;"
+                                                  alt="Key">5 MIN</button>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          
+      </div>
+  </header>
+  <div class="container interests">
+      <div class="row justify-content-center">
+          <div class="col-auto">                
+              <h2>Steve’s interests</h2>
+          </div>
+      </div>
+      <div class="row justify-content-center" style="position: relative;">
+          <div class="col-5" style="max-width: 400px; min-width: 400px;">
+              <div class="chart">
+                  <canvas id="myChart" width="100" height="100" style="margin-top: 100px"></canvas>
+                  <div class="avatar">
+                      <img src="/static/img/man.png" alt="">
+                  </div>
+              </div> 
+          </div>
+          <div class="netflix interest">
+              <span class="icon-rnd red" style="display: inline-block; position: relative; vertical-align: bottom;">
+                  <div><img src="/static/icons/icon_movie.svg" alt=""></div>
+              </span>
+              <span class="icon-rnd yellow" style="display: inline-block; position: relative; vertical-align: bottom;">
+                  <div><img src="/static/icons/icon_education.svg" alt=""></div>
+              </span>
+              <span class="title">netflix</span>
+          </div>
+          <div class="skyeng interest">
+              <span class="icon-rnd green" style="display: inline-block; position: relative; vertical-align: bottom;">
+                  <div><img src="/static/icons/icon_business.svg" alt=""></div>
+              </span>
+              <span class="icon-rnd mint" style="display: inline-block; position: relative; vertical-align: bottom;">
+                  <div><img src="/static/icons/icon_language.svg" alt=""></div>
+              </span>
+              <span class="title">skyeng</span>
+          </div>
+          <div class="spotify interest">
+              <span class="icon-rnd blue" style="display: inline-block; position: relative; vertical-align: bottom;">
+                  <div><img src="/static/icons/icon_music.svg" alt=""></div>
+              </span>
+              <span class="title">spotify</span>
+          </div>
+      </div>
+      <div class="row justify-content-around">
+          <div class="col-3">
+              <div class="row">
+                  <div class="col-12 mt-1">
+                      <div class="row skill-level">
+                          <div class="col">
+                              <span class="progress-title">Art & movies</span>
+                          </div>
+                          <div class="col-auto mr-0">
+                              <span class="percent">36%</span>
+                          </div>
+                          <div class="col-12">
+                              <div class="progress red">
+                                  <div class="progress-bar" style="width: 36%;" role="progressbar" aria-valuenow="36" aria-valuemin="0"
+                                      aria-valuemax="100"></div>
+                              </div>
+                          </div>
+                      </div>  
+                  </div>
+                  <div class="col-12 mt-1">
+                      <div class="row skill-level">
+                          <div class="col">
+                              <span class="progress-title">History</span>
+                          </div>
+                          <div class="col-auto mr-0">
+                              <span class="percent">22%</span>
+                          </div>
+                          <div class="col-12">
+                              <div class="progress yellow">
+                                  <div class="progress-bar" style="width: 22%;" role="progressbar" aria-valuenow="22" aria-valuemin="0"
+                                      aria-valuemax="100"></div>
+                              </div>
+                          </div>
+                      </div>  
+                  </div>
+                  <div class="col-12 mt-1">
+                      <div class="row skill-level">
+                          <div class="col">
+                              <span class="progress-title">Business & finances</span>
+                          </div>
+                          <div class="col-auto mr-0">
+                              <span class="percent">18%</span>
+                          </div>
+                          <div class="col-12">
+                              <div class="progress green">
+                                  <div class="progress-bar" style="width: 18%;" role="progressbar" aria-valuenow="18" aria-valuemin="0"
+                                      aria-valuemax="100"></div>
+                              </div>
+                          </div>
+                      </div>  
+                  </div>
+              </div>
+          </div>
+          <div class="col-3">
+              <div class="row">
+                  <div class="col-12 mt-1">
+                      <div class="row skill-level">
+                          <div class="col">
+                              <span class="progress-title">Languages</span>
+                          </div>
+                          <div class="col-auto mr-0">
+                              <span class="percent">12%</span>
+                          </div>
+                          <div class="col-12">
+                              <div class="progress mint">
+                                  <div class="progress-bar" style="width: 12%;" role="progressbar" aria-valuenow="12" aria-valuemin="0"
+                                      aria-valuemax="100"></div>
+                              </div>
+                          </div>
+                      </div>  
+                  </div>
+                  <div class="col-12 mt-1">
+                      <div class="row skill-level">
+                          <div class="col">
+                              <span class="progress-title">Music</span>
+                          </div>
+                          <div class="col-auto mr-0">
+                              <span class="percent">8%</span>
+                          </div>
+                          <div class="col-12">
+                              <div class="progress blue">
+                                  <div class="progress-bar" style="width: 8%;" role="progressbar" aria-valuenow="8" aria-valuemin="0"
+                                      aria-valuemax="100"></div>
+                              </div>
+                          </div>
+                      </div>  
+                  </div>
+                  <div class="col-12 mt-1">
+                      <div class="row skill-level">
+                          <div class="col">
+                              <span class="progress-title">Other interests</span>
+                          </div>
+                          <div class="col-auto mr-0">
+                              <span class="percent">4%</span>
+                          </div>
+                          <div class="col-12">
+                              <div class="progress purple">
+                                  <div class="progress-bar" style="width: 4%;" role="progressbar" aria-valuenow="4" aria-valuemin="0"
+                                      aria-valuemax="100"></div>
+                              </div>
+                          </div>
+                      </div>  
+                  </div>
+              </div>
+          </div>
+      </div>        
+  </div>
+  <div class="container">
+      <div class="row" style="padding-top: 150px;">
+          <div class="col-sm-12 py-5 col-md-6 col-lg-4 ">
+              <div class="card netflix">
+                  <img src="/static/img/netflix.png" alt="" class="logo-bottom">
+                  <span class="title">The best historical movies <br> on Netflix</span>
+                  <button>
+                      <span>
+                          <b class="subscription">SUBSCRIPTION FROM</b> <br>
+                          <b class="price-number">$38</b>/month
+                      </span> 
+                  </button>
+              </div>
+          </div>
+          <div class="col-sm-12 py-5 col-md-6 col-lg-4">
+              <div class="card skyeng">
+                  <img src="/static/img/skyeng.png" alt="" class="logo-bottom">
+                  <span class="title">Learn spanish for business <br> on Skyeng</span>
+                  <button>
+                      <span>
+                          <b class="subscription">SUBSCRIPTION FROM</b> <br>
+                          <b class="price-number">$38</b>/month
+                      </span> 
+                  </button>
+              </div>
+          </div>
+          <div class="col-sm-12 py-5 col-md-6 col-lg-4">
+              <div class="card netflix">
+                  <img src="/static/img/netflix.png" alt="" class="logo-bottom">
+                  <span class="title">The best historical movies <br> on Netflix</span>
+                  <button>                        
+                      <span>
+                          <b class="subscription">SUBSCRIPTION FROM</b> <br>
+                          <b class="price-number">$38</b>/month
+                      </span>                        
+                  </button>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="container" style="padding-top: 116px;">
+      <div class="row">
+          <div class="col share-link text-center">
+              <span>Share the result or 
+                  <a href="">send the link 
+                      <img src="/static/img/share.svg" class="ml-1" alt="">
+                  </a>
+              </span>
+          </div>            
+      </div>
+  </div>
+  <div class="container">
+      <div class="row justify-content-center" style="padding-top: 35px; height: 60px;">
+          <div class="col-auto icon-rnd yellow"><div><img src="/static/icons/social/facebook.svg" alt=""></div></div>
+          <div class="col-auto icon-rnd yellow"><div><img src="/static/icons/social/instagram.svg" alt=""></div></div>
+          <div class="col-auto icon-rnd yellow"><div><img src="/static/icons/social/twitter.svg" alt=""></div></div>
+          <div class="col-auto icon-rnd yellow"><div><img src="/static/icons/social/linkedin.svg" alt=""></div></div>
+      </div>
+  </div>
+  <footer class="container rights" style="padding-top: 92px; padding-bottom: 62px;">
+      <div class="row justify-content-center">
+          <div class="col-auto">
+              <span>Powered by <b>digi.gift</b></span>
+          </div>
+      </div>
+  </footer>
+  
+  <script type="text/javascript">
+  var ctx = document.getElementById('myChart').getContext('2d');
+  var chart = new Chart(ctx, {
+  // The type of chart we want to create
+  type: 'doughnut',
+  legend: {
+          display: false
+      },
+      title: {
+          display: false
+      },
+      layout: {
+          margin: {
+              left: 0,
+              right: 0,
+              top: 0,
+              bottom: 0
+          }
+      },
+  // The data for our dataset
+  data: {
+  datasets: [{
+      data: [30, 20, 10, 5, 50, 30],
+      backgroundColor: ["#6DCA33","#23D9A0","#2BA4D4", "#B389D3", "#FF495A", "#F9BB22"]
+  }],
 },
 
-    // Configuration options go here
-    options: {}
+  // Configuration options go here
+  options: {}
 });
 </script>
-</body>
+  </body>
 </html>
