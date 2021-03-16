@@ -4,12 +4,14 @@ const gifts = [{
     name: "Netflix",
     describtion: "The best historical movies on netflix",
     price: 8,
+    image: "image2.png"
 },
 {
     id: 2,
     name: "Skyeng",
     describtion: "Learn your english",
     price: 19,
+    image: "image.png"
 },
 ];
 
