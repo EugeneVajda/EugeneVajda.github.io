@@ -1,17 +1,19 @@
 // JSON data
 const gifts = [{
     id: 1,
+    type: "netflix",
     name: "Netflix",
     describtion: "The best historical movies on netflix",
     price: 8,
-    image: "image2.png"
+    image: "netflix.png"
 },
 {
     id: 2,
+    type: "skyeng",
     name: "Skyeng",
     describtion: "Learn your english",
     price: 19,
-    image: "image.png"
+    image: "skyeng.png"
 },
 ];
 
