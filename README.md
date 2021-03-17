@@ -28,3 +28,18 @@ npm test
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
+## Docker
+
+``` bash
+# build image with frontend
+docker build -t dipeus-frontend . 
+# run container with frontend
+docker run -it -p 8081:80 --rm --name dipeus-frontend-container dipeus-frontend
+
+# build image with backend
+docker build -t dipeus-backend .
+# run container with backend
+docker run -it -p 3002:3002 --rm --name dipeus-backend-container dipeus-backend
+```
