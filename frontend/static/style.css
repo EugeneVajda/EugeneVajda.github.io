@@ -1608,6 +1608,10 @@ p.contacts {
     height: 300px;
 }
 
+.avatar > img{
+    border-radius: 100%;
+}
+
 .progress-title{
     font-size: 18px;
     font-weight: 600;    
