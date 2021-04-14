@@ -160,8 +160,7 @@ import axios from 'axios'
 export default {
   name: 'Interests',
   data () {
-    return {
-      msg: 'Welcome to Your Vue.js App',
+    return {      
       user: null,
       userScore: null,
       categories: null,
