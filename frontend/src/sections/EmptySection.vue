@@ -1,5 +1,6 @@
+/* eslint-disable */
 <template>
-  <div>    
+  <div>
     <h1>
         Empty page
     </h1>
@@ -11,6 +12,5 @@
 export default {
   name: 'EmptySection'
 }
-
 
 </script>

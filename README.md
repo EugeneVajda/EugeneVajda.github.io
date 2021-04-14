@@ -43,3 +43,9 @@ docker build -t dipeus-backend .
 # run container with backend
 docker run -it -p 3002:3002 --rm --name dipeus-backend-container dipeus-backend
 ```
+
+## DB
+# get all models from db
+``` bash
+node_modules\.bin\sequelize-auto -o "./models" -d "dbacs1015at680" -h "ec2-34-195-233-155.compute-1.amazonaws.com" -u "aadiqujhigdxly" -p 5432 -x "6bc1549861469984166e28d5c074070af70622d5a05c66ee61bbf70bdde4f45d" -e postgres -c config.json
+```

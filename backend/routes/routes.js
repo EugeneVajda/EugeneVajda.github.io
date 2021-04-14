@@ -1,3 +1,5 @@
+const { Sequelize, DataTypes } = require('sequelize');
+
 // JSON data
 const gifts = [{
     id: 1,
@@ -22,9 +24,8 @@ const gifts = [{
     describtion: "The best historical movies on netflix",
     price: 4,
     image: "netflix.png"
-},
+}
 ];
-
 const users = [
     {
         id: "5F4DCC3B5AA765D61D8327DEB882CF99",
@@ -38,12 +39,34 @@ const users = [
     }
 ];
 
+const sequelize = new Sequelize(
+    'postgres://aadiqujhigdxly:6bc1549861469984166e28d5c074070af70622d5a05c66ee61bbf70bdde4f45d@ec2-34-195-233-155.compute-1.amazonaws.com:5432/dbacs1015at680',{        
+        "dialectOptions": {
+            "ssl": {
+                "require": true,
+                "rejectUnauthorized": false
+            }
+        }
+    }      
+) // Example for postgres
+var User = require('../models/user')(sequelize, DataTypes);
+var UserScores = require('../models/user_category_score')(sequelize, DataTypes);
+var Category = require('../models/category')(sequelize, DataTypes);
+
 // Router
 const router = app => {
-    app.get('/', (request, response) => {
-        response.send({
-            message: 'Node.js and Express REST API'
-        });
+    app.get('/', async(request, response) => {
+        try {
+            await sequelize.authenticate();
+            response.send({
+                message: 'Connection has been established successfully.'
+            });
+        } catch (error) {
+            response.send({
+                message: 'Unable to connect to the database:'
+            });
+            console.error('Unable to connect to the database:', error);
+        }     
     });
 
     app.get('/gifts', (request, response) => {
@@ -51,9 +74,28 @@ const router = app => {
     });
 
     app.get('/users', (request, response) => {
-        response.send(users);
+        User.findAll().then(users=>{
+            response.send(users);
+       }).catch(err=>response.send(err)); 
     });
+
+    app.get('/user-scores/:id', (request, response) => {
+        let id = request.params.id;
+        UserScores.findAll({where: {user_id: id}}).then(scores=>{
+            response.send(scores);
+       }).catch(err=>response.send(err)); 
+    });
+    
+    app.get('/categories', (request, response) => {
+        console.log(request.params);
+        Category.findAll().then(categories=>{
+            response.send(categories);
+       }).catch(err=>response.send(err)); 
+    });
+    
 }
 
 // Export the router
 module.exports = router;
+
+

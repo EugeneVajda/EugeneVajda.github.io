@@ -4,14 +4,12 @@ import App from './App'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import MainSection from './sections/MainSection'
-import EmptySection from './sections/EmptySection'
-
 
 Vue.use(VueRouter)
 Vue.config.productionTip = false
 
 const routes = [
-  { path: '/user/:id', component: MainSection },
+  { path: '/user/:id', component: MainSection }
 ]
 
 const router = new VueRouter({
@@ -21,5 +19,5 @@ const router = new VueRouter({
 
 new Vue({
   router,
-  render: (h) => h(App),
-}).$mount("#app");
+  render: (h) => h(App)
+}).$mount('#app')

@@ -1609,6 +1609,7 @@ p.contacts {
 }
 
 .avatar > img{
+    width: 300px;
     border-radius: 100%;
 }
 

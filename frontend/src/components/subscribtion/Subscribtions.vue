@@ -1,17 +1,17 @@
 <template>
   <div v-if="gifts">
-    <div class="row" style="padding-top: 150px;">      
-      <SubscribtionCard 
-        v-bind:describtion="gift.describtion" 
-        v-bind:type="gift.type" 
-        v-bind:name="gift.name" 
-        v-bind:price="gift.price" 
-        v-bind:image="gift.image" 
+    <div class="row" style="padding-top: 150px;">
+      <SubscribtionCard
+        v-bind:describtion="gift.describtion"
+        v-bind:type="gift.type"
+        v-bind:name="gift.name"
+        v-bind:price="gift.price"
+        v-bind:image="gift.image"
         v-for="gift in gifts" :key="gift.id">
-      </SubscribtionCard> 
+      </SubscribtionCard>
     </div>
   </div>
-  
+
 </template>
 
 <script>

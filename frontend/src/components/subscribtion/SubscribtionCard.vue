@@ -16,22 +16,22 @@
 <script>
 
 export default {
-    name: 'SubscribtionCard',
-    props: {
-        describtion: String,
-        type: String,
-        name: String,
-        price: Number,
-        image: String
-    }, 
-    methods:{
-        resolve_img_url: function (path) {
-            return `/static/img/${path}`
-        },
-        resolve_class_name: function () {
-            let vm = this;
-            return `card ${vm.type}`
-        }
+  name: 'SubscribtionCard',
+  props: {
+    describtion: String,
+    type: String,
+    name: String,
+    price: Number,
+    image: String
+  },
+  methods: {
+    resolve_img_url: function (path) {
+      return `/static/img/${path}`
+    },
+    resolve_class_name: function () {
+      let vm = this
+      return `card ${vm.type}`
     }
+  }
 }
 </script>
