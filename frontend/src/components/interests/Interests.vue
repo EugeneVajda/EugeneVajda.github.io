@@ -213,8 +213,7 @@ export default {
     })
 
     this.userHash = this.$route.params.id
-
-    
+        
     axios
       .get('http://localhost:3002/users')
       .then(
