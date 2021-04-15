@@ -166,6 +166,7 @@ export default {
       categories: null,
       userHash: null,
       showScores: false,
+      apiRoute: 'https://dipeus-bot-api.herokuapp.com',
       colors: ['#FF495A', '#F9BB22', ' #6DCA33', ' #23D9A0', '#2BA4D4', ' #B389D3'],
       percentages: []
     }
@@ -215,7 +216,7 @@ export default {
     this.userHash = this.$route.params.id
         
     axios
-      .get('http://localhost:3002/users')
+      .get(`${apiRoute}/users`)
       .then(
         function (response) {
           let users = response.data
@@ -224,7 +225,7 @@ export default {
       )
 
       axios
-      .get(`http://localhost:3002/user-scores/${this.userHash}`)
+      .get(`${apiRoute}/user-scores/${this.userHash}`)
       .then(
         function (response) {
             let scores = response.data
@@ -238,7 +239,7 @@ export default {
 
             oneScoreCost = 100 / sum;        
             axios
-            .get(`http://localhost:3002/categories`)
+            .get(`${apiRoute}/categories`)
             .then(
                 function (response) {
                 response.data.forEach((element, index) => {
