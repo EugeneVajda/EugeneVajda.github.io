@@ -1,5 +1,5 @@
 <template>
-  <div v-if="user">
+<div v-if="user">
         <div class="row justify-content-center">
             <div class="col-auto" >
                 <h2>{{ user.user_realname }}’s interests</h2>
@@ -147,10 +147,17 @@
         </div>
   </div>
   <div v-else>
-      <h2 class="text-center">
-          There is no such user
-      </h2>
-  </div>
+        <div v-if="!loaded">
+            <h2 class="text-center">
+                <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+            </h2>
+        </div>
+        <div v-else>
+            <h2 class="text-center">
+                There is no such user
+            </h2>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -167,6 +174,7 @@ export default {
       categories: null,
       userHash: null,
       showScores: false,
+      loaded: false,
       apiRoute: 'https://dipeus-bot-api.herokuapp.com',
       colors: ['#FF495A', '#F9BB22', ' #6DCA33', ' #23D9A0', '#2BA4D4', ' #B389D3'],
       percentages: []
@@ -224,7 +232,7 @@ export default {
         function (response) {
             console.log(response);
           let users = response.data
-          vm.user = users.find(vm.isUserMatch)         
+          vm.user = users.find(vm.isUserMatch) 
         }
       )
 
@@ -256,19 +264,14 @@ export default {
                         vm.chart.update();
                     }    else{
                         vm.defineChart()
-                    }                
+                    }    
+                    vm.loaded = true;             
                 });
                     vm.showScores = true;
                 }
-            )
-
-            
+            )            
         }
-      ) 
-
-    
-
-          
+      )
   }
 }
 </script>
