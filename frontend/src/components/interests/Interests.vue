@@ -241,7 +241,7 @@ export default {
                 sum += item.score;
             });
 
-            vm.defineChart();
+            
             oneScoreCost = 100 / sum;  
 
             axios
@@ -254,7 +254,9 @@ export default {
                     vm.percentages[index] = vm.userScore[index].score * oneScoreCost;
                     if(vm.chart){
                         vm.chart.update();
-                    }                    
+                    }    else{
+                        vm.defineChart()
+                    }                
                 });
                     vm.showScores = true;
                 }
