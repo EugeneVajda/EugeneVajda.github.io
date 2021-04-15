@@ -162,6 +162,7 @@ export default {
   data () {
     return {      
       user: null,
+      chart: null,
       userScore: null,
       categories: null,
       userHash: null,
@@ -179,53 +180,56 @@ export default {
     },
     getUserImage: function () {
       return `${this.user.user_image_url}`
+    },
+    defineChart: function () {
+        let ctx = document.getElementById('myChart').getContext('2d')    
+        let vm = this;
+        this.chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'doughnut',
+            legend: {
+                display: false
+            },
+            title: {
+                display: false
+            },
+            layout: {
+                margin: {
+                left: 0,
+                right: 0,
+                top: 0,
+                bottom: 0
+                }
+            },
+            // The data for our dataset
+            data: {
+                datasets: [{
+                data: vm.percentages,
+                backgroundColor: vm.colors,
+                }]
+            },
+
+            // Configuration options go here
+            options: {}
+        })
     }
   },
   mounted () {
-    var ctx = document.getElementById('myChart').getContext('2d')
-    let vm = this
-    var chart = new Chart(ctx, {
-    // The type of chart we want to create
-      type: 'doughnut',
-      legend: {
-        display: false
-      },
-      title: {
-        display: false
-      },
-      layout: {
-        margin: {
-          left: 0,
-          right: 0,
-          top: 0,
-          bottom: 0
-        }
-      },
-      // The data for our dataset
-      data: {
-        datasets: [{
-          data: vm.percentages,
-          backgroundColor: vm.colors,
-        }]
-      },
-
-      // Configuration options go here
-      options: {}
-    })
 
     this.userHash = this.$route.params.id
-        
+    let vm = this
     axios
-      .get(`${apiRoute}/users`)
+      .get(`${this.apiRoute}/users`)
       .then(
         function (response) {
+            console.log(response);
           let users = response.data
-          vm.user = users.find(vm.isUserMatch)
+          vm.user = users.find(vm.isUserMatch)         
         }
       )
 
       axios
-      .get(`${apiRoute}/user-scores/${this.userHash}`)
+      .get(`${this.apiRoute}/user-scores/${this.userHash}`)
       .then(
         function (response) {
             let scores = response.data
@@ -237,16 +241,20 @@ export default {
                 sum += item.score;
             });
 
-            oneScoreCost = 100 / sum;        
+            vm.defineChart();
+            oneScoreCost = 100 / sum;  
+
             axios
-            .get(`${apiRoute}/categories`)
+            .get(`${vm.apiRoute}/categories`)
             .then(
                 function (response) {
                 response.data.forEach((element, index) => {
                     vm.userScore[index].category_name = element.category_name;
                     vm.userScore[index].color = vm.colors[index];
                     vm.percentages[index] = vm.userScore[index].score * oneScoreCost;
-                    chart.update();
+                    if(vm.chart){
+                        vm.chart.update();
+                    }                    
                 });
                     vm.showScores = true;
                 }
@@ -254,7 +262,11 @@ export default {
 
             
         }
-      )      
+      ) 
+
+    
+
+          
   }
 }
 </script>
