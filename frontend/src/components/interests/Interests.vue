@@ -40,7 +40,7 @@
             </div>
         </div>
         <div class="row justify-content-around" v-if="showScores">
-            <div class="col-3">
+            <div class="col-12 col-sm-6 col-md-5 col-lg-3">
                 <div class="row">
                     <div class="col-12 mt-1">
                         <div class="row skill-level">
@@ -92,7 +92,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-sm-6 col-md-5 col-lg-3">
                 <div class="row">
                     <div class="col-12 mt-1">
                         <div class="row skill-level">
