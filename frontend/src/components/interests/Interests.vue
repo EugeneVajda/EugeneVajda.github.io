@@ -195,6 +195,7 @@ export default {
         this.chart = new Chart(ctx, {
             // The type of chart we want to create
             type: 'doughnut',
+            showTooltips: false,
             legend: {
                 display: false
             },
@@ -212,13 +213,19 @@ export default {
             // The data for our dataset
             data: {
                 datasets: [{
-                data: vm.percentages,
-                backgroundColor: vm.colors,
+                    data: vm.percentages,
+                    backgroundColor: vm.colors,
                 }]
             },
 
             // Configuration options go here
-            options: {}
+            options: {
+                tooltips: {
+                    // Disable the on-canvas tooltip
+                    enabled: false,
+                },
+                hover: {mode: null},
+            }
         })
     }
   },
