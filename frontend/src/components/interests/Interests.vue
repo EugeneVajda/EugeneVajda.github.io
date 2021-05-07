@@ -266,7 +266,7 @@ export default {
                 response.data.forEach((element, index) => {
                     vm.userScore[index].category_name = element.category_name;
                     vm.userScore[index].color = vm.colors[index];
-                    vm.percentages[index] = vm.userScore[index].score * oneScoreCost;
+                    vm.percentages[index] = Math.round(vm.userScore[index].score * oneScoreCost);
                     if(vm.chart){
                         vm.chart.update();
                     }    else{
