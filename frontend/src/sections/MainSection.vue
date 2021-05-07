@@ -17,15 +17,7 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="row justify-content-center" style="padding-top: 35px; height: 60px;">
-            <div class="col-auto icon-rnd yellow"><div><img src="/static/icons/social/facebook.svg" alt=""></div></div>
-            <div class="col-auto icon-rnd yellow"><div><img src="/static/icons/social/instagram.svg" alt=""></div></div>
-            <div class="col-auto icon-rnd yellow"><div><img src="/static/icons/social/twitter.svg" alt=""></div></div>
-            <div class="col-auto icon-rnd yellow"><div><img src="/static/icons/social/linkedin.svg" alt=""></div></div>
-        </div>
-    </div>
-  </div>
+</div>
 </template>
 
 <script>

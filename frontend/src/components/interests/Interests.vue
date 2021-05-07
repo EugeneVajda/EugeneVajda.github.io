@@ -21,7 +21,7 @@
                 <span class="icon-rnd yellow" style="display: inline-block; position: relative; vertical-align: bottom;">
                     <div><img src="/static/icons/icon_education.svg" alt=""></div>
                 </span>
-                <span class="title">netflix</span>
+                <span class="title">Netflix</span>
             </div>
             <div class="skyeng interest">
                 <span class="icon-rnd green" style="display: inline-block; position: relative; vertical-align: bottom;">
@@ -30,13 +30,13 @@
                 <span class="icon-rnd mint" style="display: inline-block; position: relative; vertical-align: bottom;">
                     <div><img src="/static/icons/icon_language.svg" alt=""></div>
                 </span>
-                <span class="title">skyeng</span>
+                <span class="title">Coursera</span>
             </div>
             <div class="spotify interest">
                 <span class="icon-rnd blue" style="display: inline-block; position: relative; vertical-align: bottom;">
                     <div><img src="/static/icons/icon_music.svg" alt=""></div>
                 </span>
-                <span class="title">spotify</span>
+                <span class="title">Spotify</span>
             </div>
         </div>
         <div class="row justify-content-around" v-if="showScores">
