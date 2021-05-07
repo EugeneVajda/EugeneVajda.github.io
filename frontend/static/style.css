@@ -1790,26 +1790,7 @@ p.contacts {
   font-size: 18px;
 }
 
-.share-link>span {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 24px;
-  line-height: 30px;
-}
 
-.share-link>span>a {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 24px;
-  text-decoration-line: underline;
-  color: #F9BB22;
-}
-
-.share-link>span>a>img {
-  vertical-align: middle;
-}
 
 .icon-rnd>div {
   width: 60px;
@@ -1986,4 +1967,27 @@ header button {
 
 button:focus {
   outline: none !important;
+}
+
+.share-link button {
+  background: transparent;
+  border: none;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.share-link>button>span {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  text-decoration-line: underline;
+  color: #F9BB22;
+}
+
+.share-link>button>span>img {
+  vertical-align: middle;
 }

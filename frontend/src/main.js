@@ -4,8 +4,13 @@ import App from './App'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import MainSection from './sections/MainSection'
+import VueClipboard from 'vue-clipboard2'
+import VueToast from 'vue-toast-notification'
+import 'vue-toast-notification/dist/theme-sugar.css'
 
+Vue.use(VueToast)
 Vue.use(VueRouter)
+Vue.use(VueClipboard)
 Vue.config.productionTip = false
 
 const routes = [
