@@ -256,8 +256,9 @@ export default {
                 sum += item.score;
             });
 
-            
-            oneScoreCost = 100 / sum;  
+            if(sum != 0){
+                oneScoreCost = 100 / sum; 
+            }            
 
             axios
             .get(`${vm.apiRoute}/categories`)
